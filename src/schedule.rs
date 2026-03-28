@@ -75,8 +75,6 @@ pub fn format_next_run(next: Option<DateTime<Local>>, now: DateTime<Local>) -> S
 
     if next_date == today {
         format!("{}", next.format("%H:%M"))
-    } else if next_date == today + Duration::days(1) {
-        format!("明日 {}", next.format("%H:%M"))
     } else {
         format!("{}", next.format("%m/%d %H:%M"))
     }
