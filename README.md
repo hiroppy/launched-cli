@@ -70,13 +70,13 @@ Shows upcoming scheduled runs sorted by time, without status columns:
 ## Install
 
 ```bash
-cargo install --path .
+cargo install --git https://github.com/hiroppy/launched-cli.git
 ```
 
 ## Usage
 
 ```bash
-launched-cli
+launched
 ```
 
 ## Key Bindings
