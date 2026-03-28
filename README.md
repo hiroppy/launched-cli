@@ -15,23 +15,23 @@ A TUI tool for viewing and managing macOS `launchd` services.
 ## Screenshot
 
 ```
-┌launched───────────────────────────────────────────────────────┐
-│ User │ System │ All │ Timeline                                │
-└───────────────────────────────────────────────────────────────┘
-┌───────────────────────────────────────────────────────────────┐
-│      Label                                    Exit  Next Run  │
-│                                                               │
-│      ── backup ──                                             │
-│> ✅  com.example.backup.daily                 0     07:00     │
-│  ✅  com.example.backup.weekly                0     04/01 03:00│
-│      ── myapp ──                                              │
-│  ✅  com.myapp.web-server                     0     -         │
-│  ❌  com.myapp.worker                         1     14:30     │
-│  🔄  com.myapp.scheduler                     -     15:00     │
-│      ── system ──                                             │
-│  ⏸️  com.system.updater                       -     -         │
-│                                                               │
-└──────────────────── ✅ Success  ❌ Failed  🔄 Running  ⏸️  Unloaded ┘
+┌launched──────────────────────────────────────────────────────────────┐
+│ User │ System │ All │ Timeline                                      │
+└──────────────────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────────┐
+│      Label                                       Exit   Next Run    │
+│                                                                      │
+│      ── backup ──                                                    │
+│> ✅  com.example.backup.daily                    0      07:00        │
+│  ✅  com.example.backup.weekly                   0      04/01 03:00  │
+│      ── myapp ──                                                     │
+│  ✅  com.myapp.web-server                        0      -            │
+│  ❌  com.myapp.worker                            1      14:30        │
+│  🔄  com.myapp.scheduler                        -      15:00        │
+│      ── system ──                                                    │
+│  ⏸️   com.system.updater                         -      -            │
+│                                                                      │
+└────────────────────── ✅ Success  ❌ Failed  🔄 Running  ⏸️ Unloaded ┘
 ```
 
 ### Error Detail Panel
@@ -39,11 +39,11 @@ A TUI tool for viewing and managing macOS `launchd` services.
 When a failed service is focused, the error log is shown below the list:
 
 ```
-┌ [Error] com.myapp.worker (exit: 1) ──────────────────────────┐
-│ Error: connection refused to localhost:5432                    │
-│   at Worker.connect (src/worker.ts:42)                        │
-│   at processTicksAndRejections (node:internal/process/...)    │
-└───────────────────────────────────────────────────────────────┘
+┌ [Error] com.myapp.worker (exit: 1) ─────────────────────────────────┐
+│ Error: connection refused to localhost:5432                           │
+│   at Worker.connect (src/worker.ts:42)                               │
+│   at processTicksAndRejections (node:internal/process/...)           │
+└──────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Timeline Tab
@@ -51,20 +51,20 @@ When a failed service is focused, the error log is shown below the list:
 Shows upcoming scheduled runs sorted by time, without status columns:
 
 ```
-┌launched───────────────────────────────────────────────────────┐
-│ User │ System │ All │ Timeline                                │
-└───────────────────────────────────────────────────────────────┘
-┌───────────────────────────────────────────────────────────────┐
-│    Label                                          Next Run    │
-│                                                               │
-│ >  com.example.backup.daily                       07:00       │
-│    com.myapp.worker                               14:30       │
-│    com.myapp.scheduler                            15:00       │
-│    com.example.backup.weekly                      04/01 03:00 │
-│    com.myapp.web-server                           -           │
-│    com.system.updater                             -           │
-│                                                               │
-└───────────────────────────────────────────────────────────────┘
+┌launched──────────────────────────────────────────────────────────────┐
+│ User │ System │ All │ Timeline                                      │
+└──────────────────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────────┐
+│    Label                                             Next Run        │
+│                                                                      │
+│ >  com.example.backup.daily                          07:00           │
+│    com.myapp.worker                                  14:30           │
+│    com.myapp.scheduler                               15:00           │
+│    com.example.backup.weekly                         04/01 03:00     │
+│    com.myapp.web-server                              -               │
+│    com.system.updater                                -               │
+│                                                                      │
+└──────────────────────────────────────────────────────────────────────┘
 ```
 
 ## Install
