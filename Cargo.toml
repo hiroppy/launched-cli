@@ -1,0 +1,11 @@
+[package]
+name = "launched-cli"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+ratatui = "0.29"
+crossterm = "0.28"
+plist = "1"
+chrono = "0.4"
+anyhow = "1"
